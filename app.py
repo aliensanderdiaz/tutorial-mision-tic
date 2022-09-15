@@ -10,13 +10,13 @@ from waitress import serve
 app = Flask(__name__)
 cors = CORS(app)
 
-ca = certifi.where()
-client = pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.z6feyqq.mongodb.net/bd-registro-academico?retryWrites=true&w=majority")
-db = client.test
-print(db)
+# ca = certifi.where()
+# client = pymongo.MongoClient("mongodb+srv://admin:admin@cluster0.z6feyqq.mongodb.net/bd-registro-academico?retryWrites=true&w=majority")
+# db = client.test
+# print(db)
 
-baseDatos = client["bd-registro-academico"]
-print(baseDatos.list_collection_names())
+# baseDatos = client["bd-registro-academico"]
+# print(baseDatos.list_collection_names())
 
 
 from Controladores.ControladorEstudiante import ControladorEstudiante
