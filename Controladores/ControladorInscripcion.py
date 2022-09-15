@@ -38,9 +38,8 @@ class ControladorInscripcion():
         laInscripcion = Inscripcion(self.repositorioInscripcion.findById(id))
         laInscripcion.año = infoInscripcion["año"]
         laInscripcion.semestre = infoInscripcion["semestre"]
-        laInscripcion.notaFinal = infoInscripcion["nota_final"]
-        elEstudiante = Estudiante(
-            self.repositorioEstudiantes.findById(id_estudiante))
+        laInscripcion.nota_final = infoInscripcion["nota_final"]
+        elEstudiante = Estudiante(self.repositorioEstudiantes.findById(id_estudiante))
         laMateria = Materia(self.repositorioMaterias.findById(id_materia))
         laInscripcion.estudiante = elEstudiante
         laInscripcion.materia = laMateria
